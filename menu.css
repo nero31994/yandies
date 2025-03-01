@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display:wght@500&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: url('https://source.unsplash.com/1600x900/?burger,food') no-repeat center/cover;
-    background-color: #333; /* Fallback for unsupported images */
+    font-family: 'Playfair Display', serif;
+    background: url('https://source.unsplash.com/1600x900/?wooden-table,coffee') no-repeat center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,36 +11,40 @@ body {
 }
 
 .menu-container {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 248, 220, 0.9);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 90%;
     max-width: 400px;
-    color: white; /* Ensures text is visible */
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #5a3e36;
+    border: 3px solid #8B5E3C;
 }
 
 h1 {
-    font-size: 28px;
-    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    font-weight: bold;
     margin-bottom: 15px;
+    color: #8B5E3C;
 }
 
 .menu-section {
     margin: 10px 0;
     padding: 10px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 228, 196, 0.8);
+    border: 2px solid #A67B5B;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8B5E3C;
+    margin-bottom: 8px;
+    text-decoration: underline;
 }
 
 .menu-item {
@@ -49,16 +52,19 @@ h2 {
     justify-content: space-between;
     font-size: 18px;
     padding: 5px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    border-bottom: 1px dashed #8B5E3C;
 }
 
 .price {
-    font-weight: 600;
-    color: #ffcc00;
+    font-weight: bold;
+    color: #B8860B;
 }
 
 .footer {
     margin-top: 15px;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5a3e36;
+    font-style: italic;
 }
