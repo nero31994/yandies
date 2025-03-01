@@ -1,44 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@600&display=swap');
 
 body {
     font-family: 'Playfair Display', serif;
-    background: url('https://source.unsplash.com/1600x900/?wooden-table,coffee') no-repeat center/cover;
+    background: url('https://source.unsplash.com/1600x900/?wooden-table,cafe') no-repeat center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0;
+    perspective: 1000px;
 }
 
+/* 3D Glassmorphism Menu */
 .menu-container {
-    background: rgba(255, 248, 220, 0.9);
+    background: rgba(255, 248, 220, 0.1);
+    backdrop-filter: blur(12px) saturate(120%);
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 90%;
     max-width: 400px;
     color: #5a3e36;
-    border: 3px solid #8B5E3C;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d;
 }
 
+/* 3D Hover Effect */
+.menu-container:hover {
+    transform: translateY(-5px) rotateX(3deg) rotateY(3deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Title */
 h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 15px;
     color: #8B5E3C;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Sections */
 .menu-section {
     margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-    background: rgba(255, 228, 196, 0.8);
-    border: 2px solid #A67B5B;
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(255, 228, 196, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
+/* 3D Effect on Sections */
+.menu-section:hover {
+    transform: translateZ(10px);
+}
+
+/* Section titles */
 h2 {
     font-size: 24px;
     font-weight: bold;
@@ -47,24 +69,94 @@ h2 {
     text-decoration: underline;
 }
 
+/* Menu items */
 .menu-item {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
     padding: 5px 0;
     font-weight: bold;
-    border-bottom: 1px dashed #8B5E3C;
+    border-bottom: 1px dashed rgba(139, 94, 60, 0.5);
+    transition: transform 0.2s ease-in-out;
 }
 
+/* Price styling */
 .price {
     font-weight: bold;
     color: #B8860B;
 }
 
+/* 3D Item Hover */
+.menu-item:hover {
+    transform: translateX(5px);
+    color: #8B5E3C;
+}
+
+/* Footer */
 .footer {
     margin-top: 15px;
     font-size: 16px;
     font-weight: bold;
     color: #5a3e36;
     font-style: italic;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .menu-container {
+        width: 95%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .menu-item {
+        font-size: 16px;
+    }
+    .footer {
+        font-size: 14px;
+    }
+}
+
+/* 📺 Adjustments for Larger Screens */
+@media (min-width: 1024px) {
+    .menu-container {
+        max-width: 500px;
+        padding: 25px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    .menu-item {
+        font-size: 20px;
+    }
+    .footer {
+        font-size: 18px;
+    }
+}
+
+/* 🔄 Landscape Mode Optimization */
+@media screen and (orientation: landscape) {
+    .menu-container {
+        max-width: 600px;
+        padding: 30px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .menu-item {
+        font-size: 22px;
+    }
+    .footer {
+        font-size: 18px;
+    }
 }
